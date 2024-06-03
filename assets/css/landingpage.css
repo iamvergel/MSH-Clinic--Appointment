@@ -1,0 +1,327 @@
+/* General Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f4f4f4;
+  transition: background-color 0.5s;
+  color: #333;
+  overflow: hidden;
+}
+
+/* Header Styles */
+header {
+  background-color: #013312;
+  color: #fff;
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.company-name h1 {
+  margin: 0;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+  margin: 0 10px 0 20px;
+}
+
+/* Side Navigation Styles */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #023313;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: all 0.3s ease-in;
+}
+
+.sidenav a:hover {
+  background-color: #013616;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.closebtn {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* Main Content Styles */
+#main {
+  transition: margin-left 0.5s;
+}
+
+/* Top Container Styles */
+.top-container {
+  width: 100%;
+  height: 85vh;
+  padding-top: 2%;
+  background-color: white;
+  color: #000000;
+  text-align: center;
+  position: relative;
+  top: 15vh;
+}
+
+.top-container h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.top-container p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Hero Section Styles */
+#hero {
+  background-color: #d2fcd9;
+  color: #141414;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  height: 80%;
+  text-align: center;
+}
+#hero .image {
+  height: 110%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative; /* Needed for absolute positioning of the text */
+  padding: 3px;
+  border-radius: 8px;
+  width: 100%;
+  left: 1%;
+  top: 10%;
+  object-fit: cover;
+}
+#hero img {
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative; /* Needed for absolute positioning of the text */
+  padding: 3px;
+  border-radius: 8px;
+
+  width: 60%;
+  left: -2%;
+  top: -15%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+#hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#hero button {
+  top: -10%;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  background-color: #026826;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+  background-color: #013616;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: sticky;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  border: 1px solid #888;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.modal-header {
+  text-align: center;
+  padding: 10px;
+  background-color: #026826;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-header .close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-header .close:hover,
+.modal-header .close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+input[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #026826;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  max-width: 200px;
+}
+
+input[type="submit"]:hover {
+  background-color: #013616;
+}
+
+input[type="date"] {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* Row Styles */
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left-column,
+.right-column {
+  width: 50vh;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  margin-top: 15vh;
+}
+
+.left-column h2,
+.right-column h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.left-column p,
+.right-column p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}

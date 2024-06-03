@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merciful Saviour Healthcare</title>
+
+    <link rel="icon" type="image/x-icon" href="..\images\MSHLogo.png" />
+    <link rel="stylesheet" href="../css/landingpage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div class="navButton">
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="#">About</a>
+        <a href="http://127.0.0.1:5500/index.html">Log-out</a>
+      </div>
+    </div>
+
+    <div id="main">
+      <header>
+        <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+          >&#9776;</span
+        >
+        <div class="logo">
+          <img src="..\images\MSHLogo.png" alt="Company Logo" />
+        </div>
+        <div class="company-name">
+          <h1>Merciful Saviour Healthcare</h1>
+        </div>
+      </header>
+
+      <div class="top-container">
+        <h1>Welcome User!</h1>
+        <p>
+          Seamlessly manage your appointments and access health records online.
+        </p>
+        <button id="myBtn">Make an appointment</button>
+        <a href="#status">Show Status</a>
+      </div>
+
+      <section id="hero">
+        <!-- Modal Button -->
+
+        <!-- Modal -->
+        <div id="myModal" class="modal" style="display: none">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Appointment Form</h2>
+              <form action="#" method="post">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required />
+
+                <label for="middle_name">Middle Name:</label>
+                <input type="text" id="middle_name" name="middle_name" />
+
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="phone">Phone:</label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  maxlength="13"
+                  oninput="validateInput()"
+                  value="+63 "
+                  required
+                />
+
+                <label for="appointment_date">Appointment Date:</label>
+                <input
+                  type="date"
+                  id="appointment_date"
+                  name="appointment_date"
+                  required
+                  class="date-input"
+                />
+
+                <label for="appointment_time">Appointment Time:</label>
+                <select id="appointment_time" name="appointment_time" required>
+                  <option value="" disabled selected>Select Time</option>
+                  <option value="09:00">09:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">01:00 PM</option>
+                  <option value="14:00">02:00 PM</option>
+                  <option value="15:00">03:00 PM</option>
+                  <option value="16:00">04:00 PM</option>
+                  <option value="17:00">05:00 PM</option>
+                  <option value="18:00">06:00 PM</option>
+                </select>
+
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="row" id="status">
+        <div class="left-column">
+          <h2>Status</h2>
+          <p>Left Column Container</p>
+          <a href="#main">back to top</a>
+        </div>
+        <div class="right-column">
+          <h2>Your List of Appointments</h2>
+          <p>Right Column Container</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get today's date
+        let today = new Date();
+        let tomorrow = new Date();
+        tomorrow.setDate(today.getDate() + 1);
+
+        // Calculate two weeks from today
+        let twoWeeksFromToday = new Date();
+        twoWeeksFromToday.setDate(today.getDate() + 14);
+
+        // Format dates to YYYY-MM-DD
+        let tomorrowStr = tomorrow.toISOString().split("T")[0];
+        let twoWeeksFromTodayStr = twoWeeksFromToday
+          .toISOString()
+          .split("T")[0];
+
+        // Set the min and max attributes of the input field
+        let dateInput = document.getElementById("appointment_date");
+        dateInput.setAttribute("min", tomorrowStr);
+        dateInput.setAttribute("max", twoWeeksFromTodayStr);
+      });
+
+      function validateInput() {
+        const input = document.getElementById("phone");
+        const fixedValue = "+63 ";
+        if (!input.value.startsWith(fixedValue)) {
+          input.value = fixedValue;
+        }
+        if (input.value.length > 14) {
+          input.value = input.value.slice(0, 14);
+        }
+      }
+
+      window.onload = () => {
+        document.getElementById("phone").value = "+63 ";
+      };
+
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "flex";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      function closeModal() {
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

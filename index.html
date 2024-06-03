@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merciful Saviour Healthcare</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/MSHLogo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="assets/images/MSHLogo.png" alt="Company Logo" />
+      </div>
+      <div class="company-name">
+        <h1>Merciful Saviour Healthcare</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col1">
+          <div class="slider">
+            <img class="slide" src="assets/images/img7.jpg" alt="Slide 1" />
+            <div class="content">
+              <h1>PHASE 3 PKG2 BLK 32 LOT 5</h1>
+              <p>BAGONG SILANG CALOOCAN CITY</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Login Form -->
+        <div class="col2">
+          <form class="login-form" action="/login" method="post">
+            <h1>Login</h1>
+            <div class="input-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="button-group">
+              <button type="button" class="login">Login</button>
+              <p>Don't have an account?</p>
+              <a
+                href="#"
+                onclick="document.getElementById('signupModal').style.display='block'"
+                >Sign Up</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+      <div class="modal-content card">
+        <header class="modal-header teal">
+          <h2>Sign-up</h2>
+          <span
+            onclick="document.getElementById('signupModal').style.display='none'"
+            class="close-button"
+            >&times;</span
+          >
+        </header>
+        <div class="modal-body">
+          <form class="signup-form" action="/signup" method="post">
+            <h3>Please fill the form properly</h3>
+            <div class="input-group">
+              <label for="first_name">First Name:</label>
+              <input type="text" id="first_name" name="first_name" required />
+            </div>
+            <div class="input-group">
+              <label for="middle_name">Middle Name:</label>
+              <input type="text" id="middle_name" name="middle_name" />
+            </div>
+            <div class="input-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="input-group">
+              <label for="phone">Phone:</label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                maxlength="13"
+                oninput="validateInput()"
+                value="+63 "
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+            <div class="input-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="button-group">
+              <button class="signup" type="button">Sign Up</button>
+            </div>
+          </form>
+        </div>
+        <footer class="modal-footer teal">
+          <p></p>
+        </footer>
+      </div>
+    </div>
+
+    <div
+      class="loader"
+      style="
+        position: absolute;
+        width: 100vw;
+        background-color: rgb(1, 41, 9);
+        height: 100vh;
+        display: none;
+      "
+    >
+      <img
+        src="assets/images/logooo.png"
+        style="
+          width: auto;
+          height: 30%;
+
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        "
+      />
+    </div>
+
+    <script src="assets/script/main.js"></script>
+  </body>
+</html>
