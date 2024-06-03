@@ -9,7 +9,7 @@ logIn.addEventListener("click", () => {
     loader.style.display = "block";
     setTimeout(() => {
       window.location.href =
-        "http://127.0.0.1:5500/assets/src/landingpage1.html";
+        "/assets/src/landingpage1.html";
     }, 1000);
   } else {
     alert("Wrong username or password");
