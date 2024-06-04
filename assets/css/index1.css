@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
+  cursor: pointer;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.loginForm {
+  background-color: yellow;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transition: all 0.2s ease-in;
+}
+
+.signupForm {
+  background-color: antiquewhite;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transition: all 0.2s ease-in;
+}
+
+.slide {
+  background: rgb(0, 140, 49);
+  background: linear-gradient(
+    60deg,
+    rgba(0, 140, 49, 1) 0%,
+    rgba(2, 51, 19, 1) 100%
+  );
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transition: all 0.2s ease-out;
+}
+.slide .signIn {
+  display: none;
+}
+.slide .signUp {
+  display: block;
+}
