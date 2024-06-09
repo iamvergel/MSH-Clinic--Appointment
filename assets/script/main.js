@@ -25,6 +25,8 @@ logIn.addEventListener("click", () => {
         setTimeout(() => {
           window.location.href = "/assets/src/Angelo.html";
         }, 2000);
+      } else {
+        alert("Username or Password is not Correct!");
       }
     }
   }
