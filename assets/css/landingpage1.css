@@ -43,16 +43,27 @@ body {
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-.navButton a {
+.navButton button {
   margin-top: 1.5rem;
   text-decoration: none;
   color: #ffffff;
   display: block;
   padding: 1rem;
+  width: 100%;
+  border: none;
 }
-.navButton a:hover {
+.navButton button:hover {
   background-color: #008c31;
   color: #fff;
+}
+.dashboard {
+  background-color: #008c31;
+}
+.profile {
+  background-color: #013312;
+}
+.logOut {
+  background-color: #013312;
 }
 
 /* Container */
@@ -85,6 +96,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 5;
+  transition: all 0.3s ease-in-out;
 }
 .header span {
   font-size: 23px;
@@ -250,6 +262,185 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.apointmentBg {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(11px) saturate(200%);
+  -webkit-backdrop-filter: blur(11px) saturate(200%);
+  background-color: rgba(1, 51, 18, 0.53);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  animation: bg 0.3s linear;
+  display: none;
+}
+
+@keyframes bg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.apointment {
+  width: 80%;
+  height: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #ffffff8f;
+  color: #013312;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px -1px 10px 7px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 1px -1px 10px 7px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px -1px 10px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 2px solid #013312;
+}
+
+.apointment h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.apointment form {
+  display: grid;
+  gap: 20px;
+}
+
+.apointment .form-row {
+  display: grid;
+  gap: 20px;
+}
+
+.apointment .form-row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.apointment label {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.apointment input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #013312;
+  border-radius: 5px;
+  color: #013312;
+}
+
+.apointment #reason {
+  resize: none;
+  border: 1px solid #013312;
+  color: #013312;
+  padding: 10px;
+}
+
+.apointment button {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #013312;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30%;
+  position: absolute;
+  bottom: 10px;
+  left: 40rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.apointment button:hover {
+  background-color: #026826;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  text-align: center;
+  animation: bg 0.1s linear;
+}
+
+@keyframes bg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: rgb(0, 140, 49);
+  background: linear-gradient(
+    86deg,
+    rgba(0, 140, 49, 1) 0%,
+    rgba(2, 51, 19, 1) 100%
+  );
+  color: #fff;
+  margin: 15% auto;
+  padding: 50px;
+  border: 1px solid #fff;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+.okay {
+  padding: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #013312;
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  border: none;
+}
+
+.okay:hover {
+  background-color: #008c31;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .form-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 576px) {
   .avatar {
     display: none;
@@ -334,4 +525,231 @@ body {
     font-size: 12px;
     border: none;
   }
+}
+
+.container2 {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.container2 .userInfo {
+  width: 100vh;
+  height: 100vh;
+}
+
+.container2 .profileImg {
+  width: 40%;
+  height: 100%;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container2 .img {
+  width: 150px;
+  height: 150px;
+  background-color: #013312;
+  margin-top: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #013312;
+}
+
+.container2 .img img {
+  border-radius: 50%;
+  height: 100%;
+  width: auto;
+}
+
+.container2 .profileImg p {
+  color: #013312;
+  font-size: 15px;
+  position: absolute;
+  top: 55%;
+  left: 9%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.container2 .container {
+  width: 100%;
+  height: 85%;
+  padding: 40px;
+  background-color: #0133123a;
+  transform: none; /* Remove transform */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.container2 h1 {
+  text-align: start;
+  margin-bottom: 40px;
+  position: relative; /* Changed from absolute to relative */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #013312;
+  text-align: center;
+  font-size: 15px;
+  margin-right: 150px;
+}
+
+.container2 form {
+  display: grid;
+  gap: 20px;
+}
+
+.container2 .form-row {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+}
+
+.container2 .form-row > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+
+.container2 label {
+  margin-bottom: 3px;
+  font-weight: bold;
+  color: #013312;
+  letter-spacing: 1px;
+}
+
+.container2 input,
+select,
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #013312;
+  border-radius: 2px;
+  color: #013312;
+  background-color: #02682623;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.container2 textarea {
+  resize: none;
+  width: 50%;
+}
+
+.container2 button {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #013312;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 20%;
+  margin-top: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.container2 button:hover {
+  background-color: #026826;
+}
+
+.container2 .full-width {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container2 .container {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto; /* Center the container with margin */
+  }
+
+  .container2 .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .container2 form {
+    margin-top: 0;
+  }
+
+  .container2 h1 {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .container2 button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container2 .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .container2 button {
+    padding: 10px;
+  }
+}
+
+.container2 .editProfile {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000a6;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.container2 .editForm {
+  background-color: #fff;
+  height: 80%;
+  width: 80%;
+  display: grid;
+  gap: 20px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.container2 .editForm button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #013312;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30%;
+  margin-top: 0;
+  position: relative;
+  left: 40rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.container2 .editForm button:hover {
+  background-color: #026826;
 }

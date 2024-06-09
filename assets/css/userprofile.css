@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.userInfo {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.profileImg {
+  width: 20%;
+  height: 100%;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+  background-color: #013312;
+  margin-top: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #013312;
+}
+
+.img img {
+  border-radius: 50%;
+  height: 100%;
+  width: auto;
+}
+
+.profileImg p {
+  color: #013312;
+  font-size: 15px;
+  position: absolute;
+  top: 41%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  max-width: 1200px;
+  padding: 40px;
+  background-color: #0133123a;
+  transform: none; /* Remove transform */
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+h1 {
+  text-align: start;
+  margin-bottom: 40px;
+  position: relative; /* Changed from absolute to relative */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #013312;
+}
+
+form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+}
+
+.form-row > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+
+label {
+  margin-bottom: 3px;
+  font-weight: bold;
+  color: #013312;
+  letter-spacing: 1px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #013312;
+  border-radius: 2px;
+  color: #013312;
+  background-color: #02682623;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+textarea {
+  resize: none;
+  width: 50%;
+}
+
+button {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #013312;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30%;
+  margin-top: 20px;
+  position: relative;
+  left: 40rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #026826;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto; /* Center the container with margin */
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    margin-top: 0;
+  }
+
+  h1 {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
+
+.editProfile {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000a6;
+  position: absolute;
+  top: 0;
+}
+
+.editForm {
+  background-color: #fff;
+  height: 80%;
+  width: 80%;
+  display: grid;
+  gap: 20px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.editForm button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #013312;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30%;
+  margin-top: 0;
+  position: relative;
+  left: 40rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.editForm button:hover {
+  background-color: #026826;
+}

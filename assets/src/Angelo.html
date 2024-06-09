@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merciful Saviour Healthcare</title>
+
+    <link rel="icon" type="image/x-icon" href="..\images\MSHLogo.png" />
+    <link rel="stylesheet" href="../css/landingpage1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/e6ff8901e1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <img src="../images/MSHLogo.png" alt="Company Logo" />
+      <div class="navButton">
+        <button class="dashboard">Dashboard</button>
+        <button class="profile">Profile</button>
+        <button class="logOut">Log-out</button>
+      </div>
+    </div>
+
+    <!-- For Header -->
+    <div class="header">
+      <span id="toggleBtn" onclick="openNav()">&#9776;</span>
+      <h1>Merciful Saviour Healthcare</h1>
+    </div>
+
+    <div class="container">
+      <div class="wrapper">
+        <!-- For Main -->
+        <div class="main">
+          <h1>Welcome Angelo!</h1>
+          <p>
+            Seamlessly manage your appointments and access health records
+            online.
+          </p>
+        </div>
+
+        <div class="avatar">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/024/585/400/original/3d-happy-cartoon-doctor-cartoon-doctor-on-transparent-background-generative-ai-png.png"
+            alt=""
+          />
+          <div class="speech-bubble">
+            <p>
+              Needing Medical advise? <br />
+              <br />
+              Book appointment here.
+            </p>
+          </div>
+        </div>
+
+        <div class="mainBtn">
+          <button class="AppointmentBtn">
+            <i class="fa-solid fa-calendar-check"></i>Appointment
+          </button>
+          <button class="statusBtn">
+            <i class="fa-solid fa-signal"></i>Show Status
+          </button>
+        </div>
+
+        <div class="socialMedia">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook-messenger"></i>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="userInfo">
+        <div class="profileImg">
+          <div class="img">
+            <img src="\..\assets\images\Sunognalogo.jpg" alt="" />
+          </div>
+          <p>Profile</p>
+        </div>
+        <div class="container">
+          <h1>User Information</h1>
+          <form>
+            <div class="form-row">
+              <div>
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname3" placeholder="" disabled />
+              </div>
+              <div>
+                <label for="middlename">Middle Name</label>
+                <input type="text" id="middlename3" placeholder="" disabled />
+              </div>
+              <div>
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname3" placeholder="" disabled />
+              </div>
+              <div>
+                <label for="lastname">Suffix Name</label>
+                <input type="text" id="lastname3" placeholder="" disabled />
+              </div>
+              <div>
+                <label for="age">Age</label>
+                <input type="number" id="age3" placeholder="" disabled />
+              </div>
+              <div>
+                <label for="birthday">Birthday</label>
+                <input type="text" id="birthday3" disabled />
+              </div>
+              <div>
+                <label for="sex">Sex</label>
+                <input type="text" id="sex3" placeholder="" disabled />
+              </div>
+              <div>
+                <label for="blood">Blood type</label>
+                <input type="text" id="bloodtype3" placeholder="" disabled />
+              </div>
+              <div>
+                <label for="marital-status">Marital Status</label>
+                <input
+                  type="text"
+                  id="marital-status3"
+                  placeholder=""
+                  disabled
+                />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone3" placeholder="" disabled />
+              </div>
+              <div>
+                <label for="address">Address</label>
+                <input type="text" id="address3" placeholder="" disabled />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email3" placeholder="" disabled />
+              </div>
+            </div>
+            <div class="full-width">
+              <label for="allergies">Food / Environmental Allergies</label>
+              <textarea
+                disabled
+                id="allergies3"
+                name="allergies"
+                rows="5"
+                cols="100"
+              ></textarea>
+            </div>
+            <button type="button" class="edit">Edit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="editProfile">
+        <form class="editForm">
+          <div class="form-row">
+            <div>
+              <label for="firstname">First Name</label>
+              <input type="text" id="firstname1" placeholder="" />
+            </div>
+            <div>
+              <label for="middlename">Middle Name</label>
+              <input type="text" id="middlename1" placeholder="" />
+            </div>
+            <div>
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname1" placeholder="" />
+            </div>
+            <div>
+              <label for="lastname">Suffix Name</label>
+              <input type="text" id="lastname1" placeholder="" />
+            </div>
+            <div>
+              <label for="age">Age</label>
+              <input type="number" id="age1" placeholder="" />
+            </div>
+            <div>
+              <label for="birthday">Birthday</label>
+              <input type="Date" id="birthday1" />
+            </div>
+            <div>
+              <label for="sex">Sex</label>
+              <select id="sex1">
+                <option value="select"></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div>
+              <label for="blood">Blood type</label>
+              <select id="blood1">
+                <option value="select"></option>
+                <option value="+A">+A</option>
+                <option value="+B">+B</option>
+                <option value="-A">-A</option>
+                <option value="-B">-B</option>
+                <option value="O">O</option>
+              </select>
+            </div>
+            <div>
+              <label for="marital-status">Marital Status</label>
+              <select id="maritalstatus1">
+                <option value="" Select></option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input type="number" id="phone1" placeholder="" />
+            </div>
+            <div>
+              <label for="address">Address</label>
+              <input type="text" id="address1" placeholder="" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email1" placeholder="" />
+            </div>
+          </div>
+          <div class="full-width">
+            <label for="allergies">Food / Environmental Allergies</label>
+            <textarea
+              id="allergies1"
+              name="allergies"
+              rows="5"
+              cols="100"
+            ></textarea>
+          </div>
+          <button type="button" class="save">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="apointmentBg">
+      <div class="apointment">
+        <h1>Appointment Form</h1>
+        <form>
+          <div class="form-row">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Enter your name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter your email" />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+              />
+            </div>
+            <div>
+              <label for="date">Date</label>
+              <input type="date" id="date" />
+            </div>
+            <div>
+              <label for="time">Time</label>
+              <input type="time" id="time" />
+            </div>
+            <div>
+              <label for="time">Telephone Number</label>
+              <input
+                type="tel"
+                id="telnum"
+                placeholder="Enter your telephone Number"
+              />
+            </div>
+            <div>
+              <label for="reason">Reason for Appointment</label>
+              <textarea
+                id="reason"
+                name="reason"
+                rows="10"
+                cols="50"
+              ></textarea>
+            </div>
+          </div>
+          <button type="button" class="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <p>
+          Apointment Sent! <br />
+          Please wait to approve your apointment
+        </p>
+        <button class="okay">Okay</button>
+      </div>
+    </div>
+
+    <div class="loader">
+      <img src="../images/MSHLogo.png" />
+    </div>
+
+    <script src="\assets\script\landingPage.js"></script>
+  </body>
+</html>

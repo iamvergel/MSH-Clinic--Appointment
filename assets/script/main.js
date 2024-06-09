@@ -1,16 +1,31 @@
 let logIn = document.querySelector(".login");
 
-logIn.addEventListener("click", () => {
-  let user = document.querySelector("#username");
-  let pass = document.querySelector("#password");
-  let loader = document.querySelector(".loader");
+let userAccount = [
+  { user: "Angelo", pass: "Ordonio" },
+  { user: "Joemel", pass: "Pinones" },
+  { user: "Ryan", pass: "Rodriguez" },
+  { user: "Mark", pass: "Panis" },
+  { user: "Edward", pass: "Turalba" },
+  { user: "Sample", pass: "Sample" },
+];
+let userName = document.querySelector("#username");
+let passWord = document.querySelector("#password");
 
-  if (user.value === "admin" && pass.value === "123") {
-    loader.style.display = "block";
-    setTimeout(() => {
-      window.location.href = "/assets/src/landingpage1.html";
-    }, 1000);
-  } else {
-    alert("Wrong username or password");
+let loader = document.querySelector(".loader");
+
+logIn.addEventListener("click", () => {
+  for (let i = 0; i < userAccount.length; i++) {
+    if (
+      userName.value === userAccount[i].user &&
+      passWord.value === userAccount[i].pass
+    ) {
+      if (userName.value === "Angelo") {
+        loader.style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = "/assets/src/Angelo.html";
+        }, 2000);
+      }
+    }
   }
 });
